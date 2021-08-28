@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9633f647-f8e6-4cd4-8380-2d9d056b185b" name="极速云" url="https://daka.blueskyan.xyz">
+        <fileTransfer rootFolder="/var/www" accessType="SFTP" host="daka.blueskyan.xyz" port="22" sshConfigId="d02d9763-7294-4a7c-96c4-2e3c8acd2a6c" sshConfig="root@daka.blueskyan.xyz:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
