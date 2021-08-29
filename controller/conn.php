@@ -1,7 +1,7 @@
 <?php
-$dbhost = "v2ry.top";
+$dbhost = "localhost";
 $dbname = "DakaData";    //数据库名称
-$dbuser = "blueskyan";        //数据库用户名
+$dbuser = "root";        //数据库用户名
 $dbpass = "yan224..";    //数据库密码
 
 $conn = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
