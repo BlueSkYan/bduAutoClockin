@@ -23,17 +23,17 @@ $remark = $_POST["bz"];
 include "conn.php";
 //$xiangAddress = $conn->real_escape_string($xiangAddress);
 //$changAddress = $conn->real_escape_string($changAddress);
-$sql = "insert into usersdata(".
-        "stunum,dkaddress,xianaddress,xiangaddress,changaddress,".
-        "phonenum,isleave,todtemp,brabnormal,brbody,brtouch,jrbody,".
-        "jrtouch,ymjz,bz) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+$sql = "insert into usersdata(" .
+    "stunum,dkaddress,xianaddress,xiangaddress,changaddress," .
+    "phonenum,isleave,todtemp,brabnormal,brbody,brtouch,jrbody," .
+    "jrtouch,ymjz,bz) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 //if (!$stmt = $conn->prepare($sql)){
 //    echo $conn->error;
 //}
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("sssssssssssssss",$stunum,$dkAddress,
-    $xianAddress,$xiangAddress,$changAddress,$phoneNumber,$isLeave,$jinTemp,
-    $brAbnormal,$brBody,$brTouch,$jrBody,$jrTouch,$ymjiezhong,$remark);
+$stmt->bind_param("sssssssssssssss", $stunum, $dkAddress,
+    $xianAddress, $xiangAddress, $changAddress, $phoneNumber, $isLeave, $jinTemp,
+    $brAbnormal, $brBody, $brTouch, $jrBody, $jrTouch, $ymjiezhong, $remark);
 $stmt->execute();
 $stmt->close();
 $conn->close();
