@@ -12,13 +12,14 @@ if (strlen($user)!=10||!is_numeric($user)){
 } else {
     $pwd = md5($pass);
     include "conn.php";
-    $user = $conn->real_escape_string($user);
-    $pass = $conn->real_escape_string($pass);
+//    $user = $conn->real_escape_string($user);
+//    $pass = $conn->real_escape_string($pass);
     $sql1 = "select username from users where username=?";
     $stmt = $conn->prepare($sql1);;
     $stmt->bind_param("s",$user);
     $stmt->execute();
-    if ($stmt->fetch()>0) {
+    $stmt->store_result();
+    if ($stmt->num_rows>0) {
         echo "<script type='text/javascript'>alert('用户名已存在！'); location='../register.html';</script>";
     }else{
         $sql2 = "insert into users(username,password) values (?,?)";
